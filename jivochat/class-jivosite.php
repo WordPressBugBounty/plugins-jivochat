@@ -9,7 +9,7 @@
  * Author URI: www.jivochat.com
  * Plugin URI: https://jivochat.com/
  * Description: Omnichannel Live Chat and Help Desk plugin, optimized for WordPress. Free, fast, easy to install and to use. Turn your visitors into happy customers!
- * Version: 1.3.6.1
+ * Version: 1.3.6.2
  *
  * Text Domain: jivochat
  * Domain Path: /languages/
@@ -45,7 +45,7 @@ define( 'JIVOSITE_LANGUAGES_URL', JIVOSITE_API_URL . '/web/integration/languages
 define( 'JIVOSITE_INTEGRATION_URL', JIVOSITE_API_URL . '/web/integration' );
 define( 'JIVOSITE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'JIVOSITE_IMG_URL', plugin_dir_url( __FILE__ ) . '/img/' );
-define( 'JIVOSITE_PLUGIN_VERSION', '1.3.6.1' );
+define( 'JIVOSITE_PLUGIN_VERSION', '1.3.6.2' );
 
 /** Register the settings. */
 function jivosite_register_settings() {
@@ -188,7 +188,11 @@ class Jivosite {
 			$query['body']['userDisplayName'] = isset( $_POST['userDisplayName'] ) ? sanitize_text_field( wp_unslash( $_POST['userDisplayName'] ) ) : 'Agent';
 			$query['body']['lang']            = sanitize_text_field( wp_unslash( $_POST['languageList'] ) );
 			$query['body']['siteUrl']         = $user_site_url;
-			$auth_token                       = md5( time() . $user_site_url );
+			try {
+				$auth_token = bin2hex( random_bytes( 32 ) );
+			} catch ( Exception $exception ) {
+				return array( 'error' => 'Could not generate auth token' );
+			}
 			$query['body']['authToken']       = $auth_token;
 
 			$response = $this->get_integration_install_response( $query );

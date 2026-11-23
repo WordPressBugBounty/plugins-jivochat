@@ -4,7 +4,7 @@ Donate link: http://jivochat.com/
 Tags: сhat plugin, free live chat, wordpress live chat, live chat plugin, WordPress chat, jivochat, jivo, chat, livechat, chat for website, chat online, chat software, click desk, clickdesk, contact plugin, contact us, customer support, free chat, IM Chat, live chat, live chat services, live chat software, live chatting, live help, live support, live web chat, livechat, online chat, online support, php live chat, snapengage, support software, wordpress chat, wordpress live chat, wordpress live chat plugin, живосайт, живой сайт, дживосайт, jivosite, zendesk, zopim, zopim live chat, zendesk chat, tawk, tawkto, tawk.to, chatra, чатра, pure chat, pureсhat, smartsupp, smart supp, happyfox, happy fox, siteheart, site heart, chatnox, liveagent, live agent, slack, subiz, casengo, chatpirate, tagove, wp live chat support, wise chat, wisechat, wise, chatbro, chat bro, iflychat, tidio, flyzoo, yith, livetex, webisonline, redhelper, red helper, mylivechat, my live chat, live chat inc, livechatinc, olark, userlike, user like, zoho, zoho chat, livezilla, intercom, chatrify, onicon, callbackhunter, callback, callback widget, venyoo, comagic, talk-me, talkme, NetroxSC, boldchat, velaro, bitrix24, bitrix
 Requires at least: 3.0.1
 Tested up to: 6.4
-Stable tag: 1.3.6.1
+Stable tag: 1.3.6.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -160,8 +160,14 @@ We offer 24/7 support! You can write us at our [website](https://jivochat.com?ut
 11. Use the power of Apple Business Chat and sell directly while chatting.
 
 == Changelog ==
+= 1.3.6.2 =
+* Security improvements
+
 = 1.3.6.1 =
-* Added support of Wordpress 6.4
+* Added support for Wordpress 6.4
+
+= 1.3.6.0 =
+* Added support for php 8+
 
 = 1.3.3 =
 * Installation server URL was changed. Minor texts fixes.
